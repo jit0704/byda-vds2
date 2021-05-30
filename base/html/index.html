@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+	<title>BYDA 종합(VDS) 관리시스템 퍼블리싱</title>
+	<style>
+		*{margin:0;padding:0;}
+		body {font-family:"맑은 고딕", sans-serif;}
+		ul{list-style: none;margin:0;padding:0;}
+		table {border-collapse:collapse; border-spacing:0;}
+		strong {font-weight:normal;}
+		body{margin:20px;}
+		h1{margin:0 0 10px 0;font-weight:normal;}
+		a {text-decoration:none;color:blue;}
+		a:hover {text-decoration:underline;}
+		.list_w p.tit {padding-bottom:3px;background:#666;color:#fff;font-size:18px;border:0;line-height:40px;text-align:center;}
+		.codinglist {width:100%;text-align:center;}
+		.codinglist th {background:#efefef;color:#333;}
+		.codinglist th,
+		.codinglist td {border:1px solid #ccc;vertical-align:middle;padding:5px;font-size:14px;}
+		.codinglist td:last-child {text-align:left;}
+		.codinglist tr:hover,
+		.codinglist tr.bg {background:#efefef;}
+
+		.border-topline td {border-top:3px solid #333;}
+		.bgss {background:#222;color:#fff;}
+		.bgss a {color:#fff;}
+		.bgss:hover {background:#efefef;color:#333;}
+		.bgss:hover a {color:#333;}
+    .red-txt{color:#c5182d;font-weight: bold;}
+    .red-txt2{color:red;font-weight: bold;}
+    .green-txt {color:green;font-weight: bold;}
+	</style>
+</head>
+<body>
+	<h1>BYDA 종합(VDS) 관리시스템 퍼블리싱</h1>
+	<div class="list_w">
+		<p class="tit">퍼블리싱 리스트</p>
+		<table class="codinglist">
+			<colgroup>
+				<col style="width:3%;" />
+				<col />
+				<col />
+				<col />
+				<col />
+				<col />
+				<col style="width:8%;" />
+				<col style="width:4%;" />
+				<col style="width:27%;"  />
+			</colgroup>
+			<thead>
+				<tr>
+					<th rowspan="2">no.</th>
+					<th colspan="4">navi</th>
+					<th rowspan="2">filename</th>
+					<th rowspan="2">type</th>
+					<th rowspan="2">상태</th>
+					<th rowspan="2">etc.</th>
+				</tr>
+				<tr>
+					<th>depth1</th>
+					<th>depth2</th>
+					<th>depth3</th>
+					<th>depth4</th>
+				</tr>
+			</thead>
+			<tbody>
+        <tr>
+					<td></td><!-- 번호 -->
+					<td>공통</td><!-- depth1 -->
+					<td>시스템 팝업 / 모달 팝업</td><!-- depth2 -->
+					<td></td><!-- depth3 -->
+					<td></td><!-- depth4 -->
+					<td><a href="/base/html/common/popup.html">popup</a></td>
+					<td></td>
+					<td class="green-txt">완료</td>
+					<td>- 모달 팝업 가이드 페이지 입니다.</td>
+        </tr>
+        <tr>
+					<td></td><!-- 번호 -->
+					<td></td><!-- depth1 -->
+					<td>에러 페이지</td><!-- depth2 -->
+					<td></td><!-- depth3 -->
+					<td></td><!-- depth4 -->
+					<td><a href="/base/html/common/error.html">error</a></td>
+					<td></td>
+					<td class="green-txt">완료</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>종합</td>
+					<td>로그인</td>
+					<td></td>
+					<td></td>
+					<td><a href="/base/html/vds3000.html">vds3000</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>아이디 찾기</td>
+					<td></td>
+					<td><a href="/base/html/vds3100.html">vds3100</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>아이디 찾기 결과</td>
+					<td><a href="/base/html/vds3110.html">vds3110</a></td>
+					<td>모달 팝업</td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>비밀번호 찾기</td>
+					<td></td>
+					<td><a href="/base/html/vds3200.html">vds3200</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>비밀번호 변경</td>
+					<td><a href="/base/html/vds3210.html">vds3210</a></td>
+					<td>모달 팝업</td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>프로필 확인</td>
+					<td></td>
+					<td></td>
+					<td><a href="/base/html/vds4000.html">vds4000</a></td>
+					<td>모달 팝업</td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>프로필 수정</td>
+					<td></td>
+					<td><a href="/base/html/vds4100.html">vds4100</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>모니터링(16:9)</td>
+					<td></td>
+					<td></td>
+					<td><a href="/base/html/vds5000.html">vds5000</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td>- 영상 확대 팝업 포함</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>모니터링(9:16)</td>
+					<td></td>
+					<td></td>
+					<td><a href="/base/html/vds5100.html">vds5100</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td>- 영상 확대팝업 포함</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>돌발</td>
+					<td></td>
+					<td></td>
+					<td><a href="/base/html/vds6000.html">vds6000</a></td>
+					<td>모달 팝업</td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>돌발 리스트</td>
+					<td></td>
+					<td><a href="/base/html/vds6100.html">vds6100</a></td>
+					<td>우측 Layer 팝업</td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>모니터링</td>
+					<td></td>
+					<td><a href="/base/html/vds6200.html">vds6200</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td>- 영상 확대팝업 및 스냅사진 팝업 포함</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>돌발 관리</td>
+					<td></td>
+					<td><a href="/base/html/vds6300.html">vds6300</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>통계 관리</td>
+					<td>차트 - 지점별 조회(방향)</td>
+					<td></td>
+					<td><a href="/base/html/vds7000.html">vds7000</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>차트 - 지점 시간별 조회(방향/차로)</td>
+					<td></td>
+					<td><a href="/base/html/vds7100.html">vds7100</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>차트 - 지점 일자별 조회(방향/차로)</td>
+					<td></td>
+					<td><a href="/base/html/vds7200.html">vds7200</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>지점별 조회(방향)</td>
+					<td></td>
+					<td><a href="/base/html/vds7300.html">vds7300</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>지점별 조회(차로)</td>
+					<td></td>
+					<td><a href="/base/html/vds7400.html">vds7400</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>지점 시간별 조회(방향)</td>
+					<td></td>
+					<td><a href="/base/html/vds7500.html">vds7500</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>지점 시간별 조회(차로)</td>
+					<td></td>
+					<td><a href="/base/html/vds7600.html">vds7600</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>지점 일자별 조회(방향)</td>
+					<td></td>
+					<td><a href="/base/html/vds7700.html">vds7700</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>지점 일자별 조회(차로)</td>
+					<td></td>
+					<td><a href="/base/html/vds7800.html">vds7800</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>지점 일자별 조회(택2)</td>
+					<td></td>
+					<td><a href="/base/html/vds7900.html">vds7900</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>설정관리</td>
+					<td>지점관리</td>
+					<td></td>
+					<td><a href="/base/html/vds8000.html">vds8000</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>장치관리</td>
+					<td><a href="/base/html/vds8010.html">vds8010</a></td>
+					<td>모달 팝업</td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>장치관리</td>
+					<td></td>
+					<td><a href="/base/html/vds8100.html">vds8100</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>RADAR관리</td>
+					<td></td>
+					<td><a href="/base/html/vds8200.html">vds8200</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>RADAR등록</td>
+					<td><a href="/base/html/vds8210.html">vds8210</a></td>
+					<td>모달 팝업</td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>RADAR수정</td>
+					<td><a href="/base/html/vds8220.html">vds8220</a></td>
+					<td>모달 팝업</td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>CAMERA관리</td>
+					<td></td>
+					<td><a href="/base/html/vds8300.html">vds8300</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>CAMERA등록</td>
+					<td><a href="/base/html/vds8310.html">vds8310</a></td>
+					<td>모달 팝업</td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>CAMERA수정</td>
+					<td><a href="/base/html/vds8320.html">vds8320</a></td>
+					<td>모달 팝업</td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>관리자 관리</td>
+					<td></td>
+					<td><a href="/base/html/vds8400.html">vds8400</a></td>
+					<td></td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>관리자등록</td>
+					<td><a href="/base/html/vds8410.html">vds8410</a></td>
+					<td>모달 팝업</td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>관리자수정</td>
+					<td><a href="/base/html/vds8420.html">vds8420</a></td>
+					<td>모달 팝업</td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>비밀번호 변경</td>
+					<td><a href="/base/html/vds8430.html">vds8430</a></td>
+					<td>모달 팝업</td>
+					<td class="red-txt">진행중</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script>
+		$(function(){
+			$(".codinglist tr").each(function() {
+				var index = $(".codinglist tbody tr").index(this)+1;
+				$(this).children("td:first-child").text(index);
+				$(this).children("td").find('a').attr('target', '_blank');
+			});
+			$(".codinglist tr").on('click', function(){
+				$(".codinglist tr").removeClass('bg');
+				$(this).addClass('bg');
+			});
+		});
+	</script>
+</body>
+</html>

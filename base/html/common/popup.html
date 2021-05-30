@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+  <script type="text/javascript" src="/base/js/common/ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+  <style>
+    h1 {
+      padding: 20px;
+      color: #000;
+      border-bottom:1px solid #ced4da;
+    }
+    .bind {
+      padding: 0 20px 20px;
+    }
+    .ex-btn {
+      display: block;
+      width: 180px;
+      margin-left:15px;
+      line-height: 38px;
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+      background: #007bff;
+      border-radius: 5px;
+      font-weight: 400;
+    }
+    .code-view dt {
+      padding: 15px 0 15px 35px;
+      font-size: 20px;
+      color: #333;
+    }
+    .code-view dd {
+      margin: 0 35px 15px;
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+      font-weight: 400;
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    }
+    .code-view dd ol {
+      list-style-type: decimal;
+    }
+    #datepicker {border:1px solid #ced4da;}
+  </style>
+</head>
+
+<body>
+
+  <h1>시스템 Alert 팝업 예제</h1>
+  <dl class="code-view">
+    <dt>Code Preview</dt>
+    <dd>
+      <blockquote><ol><li><font color="#808080">&lt;!--&nbsp;호출하려는&nbsp;팝업&nbsp;버튼에&nbsp;btn__modal--open&nbsp;클래스&nbsp;추가&nbsp;--&gt;</font></li><li><font color="#009900">&lt;<font color="#000000">a</font>&nbsp;<font color="#000066">href</font><font color="#66cc66">=</font><font color="#ff0000">&quot;#ex1&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn__modal--open&quot;</font>&gt;</font>시스템&nbsp;alert&nbsp;팝업<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">a</font>&gt;</font></li><li>&nbsp;</li><li><font color="#808080">&lt;!--&nbsp;시스템&nbsp;alert&nbsp;팝업은&nbsp;modal-popup__alert클래스&nbsp;추가&nbsp;--&gt;</font></li><li><font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">id</font><font color="#66cc66">=</font><font color="#ff0000">&quot;ex1&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal&nbsp;modal-popup__alert&quot;</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__content&quot;</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">p</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__text&quot;</font>&gt;</font>내용이&nbsp;들어갑니다..<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">p</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">span</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__btn&quot;</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">&lt;!--&nbsp;닫기&nbsp;버튼에&nbsp;rel=&quot;modal:close&quot;&nbsp;속성을&nbsp;추가해야&nbsp;합니다.&nbsp;--&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">a</font>&nbsp;<font color="#000066">href</font><font color="#66cc66">=</font><font color="#ff0000">&quot;#&nbsp;&quot;</font>&nbsp;<font color="#000066">rel</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal:close&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn__regular&nbsp;btn__bg--style1&quot;</font>&gt;</font>확인<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">a</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">span</font>&gt;</font></li><li><font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font></li></ol></blockquote>
+    </dd>
+  </dl>
+  <div class="bind">
+    <p><a href="#ex1" class="btn__modal--open ex-btn">시스템 alert 팝업</a></p>
+  </div>
+
+  <div id="ex1" class="modal">
+    <div class="modal-popup__alert">
+      <div class="modal-popup__content">
+        <p class="modal-popup__text">내용이 들어갑니다..</p>
+      </div>
+      <!-- //modal-popup__content -->
+      <span class="modal-popup__btn">
+        <a href="# " rel="modal:close" class="btn__regular btn__bg--style1">확인</a>
+      </span>
+      <!-- //modal-popup__btn-wrap -->
+    </div>
+  </div>
+
+  <h1>시스템 confirm 팝업 예제</h1>
+  <dl class="code-view">
+    <dt>Code Preview</dt>
+    <dd>
+      <blockquote><ol><li><font color="#808080">&lt;!--&nbsp;호출하려는&nbsp;팝업&nbsp;버튼에&nbsp;btn__modal--open&nbsp;클래스&nbsp;추가&nbsp;--&gt;</font></li><li><font color="#009900">&lt;<font color="#000000">a</font>&nbsp;<font color="#000066">href</font><font color="#66cc66">=</font><font color="#ff0000">&quot;#ex2&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn__modal--open&quot;</font>&gt;</font>시스템&nbsp;confirm&nbsp;팝업<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">a</font>&gt;</font></li><li>&nbsp;</li><li><font color="#808080">&lt;!--&nbsp;시스템&nbsp;confirm&nbsp;팝업은&nbsp;modal-popup__alert클래스&nbsp;추가&nbsp;--&gt;</font></li><li><font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">id</font><font color="#66cc66">=</font><font color="#ff0000">&quot;ex2&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal&nbsp;modal-popup__alert&quot;</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__content&quot;</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">p</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__text&quot;</font>&gt;</font>내용이&nbsp;들어갑니다..&nbsp;내용이&nbsp;들어갑니다..&nbsp;내용이&nbsp;들어갑니다..&nbsp;내용이&nbsp;들어갑니다..<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">p</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font></li><li>&nbsp;</li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">&lt;!--&nbsp;*&nbsp;닫기&nbsp;버튼에&nbsp;rel=&quot;modal:close&quot;&nbsp;속성을&nbsp;추가해야&nbsp;합니다.</font></li><li><font color="#808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;컨펌&nbsp;팝업에는&nbsp;modal-popup__btn--size2&nbsp;클래스&nbsp;추가</font></li><li><font color="#808080">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">span</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__btn&nbsp;modal-popup__btn--size2&quot;</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">a</font>&nbsp;<font color="#000066">href</font><font color="#66cc66">=</font><font color="#ff0000">&quot;#&nbsp;&quot;</font>&nbsp;<font color="#000066">rel</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal:close&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn__regular&nbsp;btn__bg--style2&quot;</font>&gt;</font>취소<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">a</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">a</font>&nbsp;<font color="#000066">href</font><font color="#66cc66">=</font><font color="#ff0000">&quot;#&nbsp;&quot;</font>&nbsp;<font color="#000066">rel</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal:close&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn__regular&nbsp;btn__bg--style1&quot;</font>&gt;</font>확인<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">a</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">span</font>&gt;</font></li><li><font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font></li></ol></blockquote>
+    </dd>
+  </dl>
+  <div class="bind">
+    <p><a href="#ex2" class="btn__modal--open ex-btn">시스템 confirm 팝업</a></p>
+  </div>
+
+  <div id="ex2" class="modal">
+    <div class="modal-popup__alert">
+      <div class="modal-popup__content">
+        <p class="modal-popup__text">내용이 들어갑니다.. 내용이 들어갑니다.. 내용이 들어갑니다.. 내용이 들어갑니다..</p>
+      </div>
+      <!-- //modal-popup__content -->
+      <span class="modal-popup__btn modal-popup__btn--size2">
+        <a href="# " rel="modal:close" class="btn__regular btn__bg--style2">취소</a>
+        <a href="# " rel="modal:close" class="btn__regular btn__bg--style1">확인</a>
+      </span>
+      <!-- //modal-popup__btn-wrap -->
+    </div>
+  </div>
+
+  <h1>공통 모달 팝업 예제</h1>
+  <dl class="code-view">
+    <dt>Code Preview</dt>
+    <dd>
+      <blockquote><ol><li><font color="#808080">&lt;!--&nbsp;호출하려는&nbsp;팝업&nbsp;버튼에&nbsp;btn__modal--open&nbsp;클래스&nbsp;추가&nbsp;--&gt;</font></li><li><font color="#009900">&lt;<font color="#000000">a</font>&nbsp;<font color="#000066">href</font><font color="#66cc66">=</font><font color="#ff0000">&quot;#ex3&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn__modal--open&nbsp;ex-btn&quot;</font>&gt;</font>공통&nbsp;모달&nbsp;팝업<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">a</font>&gt;</font></li><li>&nbsp;</li><li><font color="#808080">&lt;!--&nbsp;공통&nbsp;모달&nbsp;팝업은&nbsp;modal-popup클래스&nbsp;추가&nbsp;--&gt;</font></li><li><font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">id</font><font color="#66cc66">=</font><font color="#ff0000">&quot;ex3&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal&nbsp;modal-popup&quot;</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__header&quot;</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">span</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__title&quot;</font>&gt;</font>아이디&nbsp;찾기&nbsp;결과<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">span</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__content&quot;</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">p</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__text&quot;</font>&gt;</font>등록된&nbsp;ID는&nbsp;[XXXXXX]&nbsp;입니다.<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">p</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font></li><li>&nbsp;</li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">&lt;!--&nbsp;*&nbsp;닫기&nbsp;버튼에&nbsp;rel=&quot;modal:close&quot;&nbsp;속성을&nbsp;추가해야&nbsp;합니다.&nbsp;--&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">span</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__btn&nbsp;modal-popup__btn--size2&quot;</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">a</font>&nbsp;<font color="#000066">href</font><font color="#66cc66">=</font><font color="#ff0000">&quot;#&nbsp;&quot;</font>&nbsp;<font color="#000066">rel</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal:close&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn__regular&nbsp;btn__bg--style2&quot;</font>&gt;</font>확인<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">a</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">a</font>&nbsp;<font color="#000066">href</font><font color="#66cc66">=</font><font color="#ff0000">&quot;#&nbsp;&quot;</font>&nbsp;<font color="#000066">rel</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal:close&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn__regular&nbsp;btn__bg--style1&quot;</font>&gt;</font>재조회<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">a</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">span</font>&gt;</font></li><li><font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font></li></ol></blockquote>
+    </dd>
+  </dl>
+  <div class="bind">
+    <p><a href="#ex3" class="btn__modal--open ex-btn">공통 모달 팝업</a></p>
+  </div>
+
+  <div id="ex3" class="modal">
+    <div class="modal-popup">
+      <div class="modal-popup__header">
+        <span class="modal-popup__title">아이디 찾기 결과</span>
+      </div>
+      <!-- //modal-popup__header -->
+      <div class="modal-popup__content">
+        <p class="modal-popup__text">등록된 ID는 [XXXXXX] 입니다.</p>
+      </div>
+      <!-- //modal-popup__content -->
+      <span class="modal-popup__btn modal-popup__btn--size2">
+        <a href="# " rel="modal:close" class="btn__regular btn__bg--style2">확인</a>
+        <a href="# " rel="modal:close" class="btn__regular btn__bg--style1">재조회</a>
+      </span>
+      <!-- //modal-popup__btn-wrap -->
+    </div>
+    <!-- //modal-popup -->
+  </div>
+
+  <h1>이중팝업 예제</h1>
+  <dl class="code-view">
+    <dt>Code Preview</dt>
+    <dd>
+      <blockquote><ol><li><font color="#808080">&lt;!--&nbsp;호출하려는&nbsp;팝업&nbsp;버튼에&nbsp;btn__modal--open&nbsp;클래스&nbsp;추가&nbsp;--&gt;</font></li><li><font color="#009900">&lt;<font color="#000000">a</font>&nbsp;<font color="#000066">href</font><font color="#66cc66">=</font><font color="#ff0000">&quot;#ex4&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn__modal--open&quot;</font>&gt;</font>이중&nbsp;팝업<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">a</font>&gt;</font></li><li>&nbsp;</li><li><font color="#808080">&lt;!--&nbsp;공통&nbsp;모달&nbsp;팝업은&nbsp;modal-popup클래스&nbsp;추가&nbsp;--&gt;</font></li><li><font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">id</font><font color="#66cc66">=</font><font color="#ff0000">&quot;ex4&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal&nbsp;modal-popup&quot;</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__header&quot;</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">span</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__title&quot;</font>&gt;</font>아이디&nbsp;찾기&nbsp;결과<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">span</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__content&quot;</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#808080">&lt;!--&nbsp;두번째&nbsp;서브&nbsp;팝업&nbsp;호출시&nbsp;a태그에&nbsp;btn__modal--open클래스&nbsp;추가&nbsp;&nbsp;--&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">p</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__text&quot;</font>&gt;&lt;<font color="#000000">a</font>&nbsp;<font color="#000066">href</font><font color="#66cc66">=</font><font color="#ff0000">&quot;#ex5&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn__modal--open&quot;</font>&gt;</font>두번째&nbsp;서브&nbsp;모달&nbsp;팝업&nbsp;호출<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">a</font>&gt;&lt;<font color="#66cc66">/</font><font color="#000000">p</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">span</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__btn&nbsp;modal-popup__btn--size2&quot;</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">a</font>&nbsp;<font color="#000066">href</font><font color="#66cc66">=</font><font color="#ff0000">&quot;#&nbsp;&quot;</font>&nbsp;<font color="#000066">rel</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal:close&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn__regular&nbsp;btn__bg--style2&quot;</font>&gt;</font>확인<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">a</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">a</font>&nbsp;<font color="#000066">href</font><font color="#66cc66">=</font><font color="#ff0000">&quot;#&nbsp;&quot;</font>&nbsp;<font color="#000066">rel</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal:close&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn__regular&nbsp;btn__bg--style1&quot;</font>&gt;</font>재조회<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">a</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">span</font>&gt;</font></li><li><font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font></li><li>&nbsp;</li><li><font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">id</font><font color="#66cc66">=</font><font color="#ff0000">&quot;ex5&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal&nbsp;modal-popup&quot;</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__header&quot;</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">span</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__title&quot;</font>&gt;</font>서브&nbsp;모달&nbsp;팝업&nbsp;입니다.<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">span</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">div</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__content&quot;</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">p</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__text&quot;</font>&gt;</font>두번째&nbsp;두번째22222222<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">p</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">span</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal-popup__btn&quot;</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#000000">a</font>&nbsp;<font color="#000066">href</font><font color="#66cc66">=</font><font color="#ff0000">&quot;#&nbsp;&quot;</font>&nbsp;<font color="#000066">rel</font><font color="#66cc66">=</font><font color="#ff0000">&quot;modal:close&quot;</font>&nbsp;<font color="#000066">class</font><font color="#66cc66">=</font><font color="#ff0000">&quot;btn__regular&nbsp;btn__bg--style1&quot;</font>&gt;</font>확인<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">a</font>&gt;</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">span</font>&gt;</font></li><li><font color="#009900">&lt;<font color="#66cc66">/</font><font color="#000000">div</font>&gt;</font></li></ol></blockquote>
+    </dd>
+  </dl>
+  <div class="bind">
+    <p><a href="#ex4" class="btn__modal--open ex-btn">이중 팝업</a></p>
+  </div>
+
+  <div id="ex4" class="modal">
+    <div class="modal-popup">
+      <div class="modal-popup__header">
+        <span class="modal-popup__title">아이디 찾기 결과</span>
+      </div>
+      <!-- //modal-popup__header -->
+      <div class="modal-popup__content">
+        <p class="modal-popup__text"><a href="#ex5" class="btn__modal--open">두번째 서브 모달 팝업 호출</a></p>
+      </div>
+      <!-- //modal-popup__content -->
+      <span class="modal-popup__btn modal-popup__btn--size2">
+        <a href="# " rel="modal:close" class="btn__regular btn__bg--style2">확인</a>
+        <a href="# " rel="modal:close" class="btn__regular btn__bg--style1">재조회</a>
+      </span>
+      <!-- //modal-popup__btn-wrap -->
+    </div>
+    <!-- //modal-popup -->
+  </div>
+
+  <div id="ex5" class="modal">
+    <div class="modal-popup">
+      <div class="modal-popup__header">
+        <span class="modal-popup__title">서브 모달 팝업 입니다.</span>
+      </div>
+      <!-- //modal-popup__header -->
+      <div class="modal-popup__content">
+        <p class="modal-popup__text">두번째 두번째22222222</p>
+      </div>
+      <!-- //modal-popup__content -->
+      <span class="modal-popup__btn">
+        <a href="# " rel="modal:close" class="btn__regular btn__bg--style1">확인</a>
+      </span>
+      <!-- //modal-popup__btn-wrap -->
+    </div>
+    <!-- //modal-popup -->
+  </div>
+
+  <!-- <h1>datepicker</h1>
+  <input type="text" id="datepicker"> -->
+
+  <script>
+    $(function(){
+      // $('.modal-popup').draggable();
+      // $('.modal-popup').resizable({
+      //   minWidth: 300,
+      //   minHeight: 250,
+      // });
+    });
+    
+  </script>
+</body>
+
+</html>

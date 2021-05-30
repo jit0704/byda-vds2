@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>RADAR 수정 팝업</title>
+    <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+    <script type="text/javascript" src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="ex1" class="modal bg-gray">
+        <div class="modal-popup mw1230">
+          <div class="modal-popup__header">
+            <span class="modal-popup__title">RADAR 수정</span>
+          </div>
+          <!-- //modal-popup__header -->
+          <div class="modal-popup__content">
+            <div class="unit-table table-borderless radar pdb10">
+              <table>
+                <colgroup>
+                  <col style="width:16.66%;">
+                  <col style="width:16.66%;">
+                  <col style="width:16.66%;">
+                  <col style="width:16.66%;">
+                  <col style="width:18.66%;">
+                  <col style="width:14.66%;">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th><span>로컬 제어기 ID</span></th>
+                    <td><input type="text" placeholder="필수" class="input__style2"></td>
+                    <th><span>로컬 제어기 IP</span></th>
+                    <td><input type="text" placeholder="필수" class="input__style2"></td>
+                    <th><span>로컬 제어기 PORT</span></th>
+                    <td><input type="text" placeholder="선택" class="input__style2"></td>
+                  </tr>
+                  <tr>
+                    <th><span>RADAR 제어기 ID</span></th>
+                    <td><input type="text" placeholder="필수" class="input__style2"></td>
+                    <th><span>RADAR 제어기 IP</span></th>
+                    <td><input type="text" placeholder="필수" class="input__style2"></td>
+                    <th><span>RADAR 제어기 PORT</span></th>
+                    <td><input type="text" placeholder="선택" class="input__style2"></td>
+                  </tr>
+                  <tr>
+                    <th><span>하행 방향명(-)</span></th>
+                    <td><input type="text" class="input__style2"></td>
+                    <th><span>하행 차로수(-)</span></th>
+                    <td><input type="text" class="input__style2"></td>
+                    <th><span>하행 차로번호(-)</span></th>
+                    <td><input type="text" class="input__style2"></td>
+                  </tr>
+                  <tr>
+                    <th><span>상행 방향명(+)</span></th>
+                    <td><input type="text" class="input__style2"></td>
+                    <th><span>상행 차로수(+)</span></th>
+                    <td><input type="text" class="input__style2"></td>
+                    <th><span>상행 차로번호(+)</span></th>
+                    <td><input type="text" class="input__style2"></td>
+                  </tr>
+                  <tr>
+                    <th><span>수정자 ID</span></th>
+                    <td><input type="text" class="input__style2"></td>
+                    <th><span>수정 일시</span></th>
+                    <td colspan="3"><input type="text" class="input__style2"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- //table-borderless -->
+          </div>
+          <!-- //modal-popup__content -->
+          <span class="modal-popup__btn txt-align__center">
+            <a href="# " rel="modal:close" class="btn__regular btn__regular--reduce btn__bg--style1">저장</a>
+          </span>
+          <!-- //modal-popup__btn-wrap -->
+        </div>
+        <!-- //modal-popup -->
+      </div>
+
+      <a href="#ex1" class="btn__modal--open" style="display: none;">등록</a> <!-- 퍼블리싱 확인용 버튼 -->
+    </div>
+    <!-- //wrapper -->
+
+    <script>
+      // 퍼블리싱 확인용
+      $(function () {
+        $('.btn__modal--open').trigger('click');
+      });
+    </script>
+  </body>
+</html>
