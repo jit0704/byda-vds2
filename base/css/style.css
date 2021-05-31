@@ -658,9 +658,14 @@ table {
 
 .btn-outbreak {
   display: inline-block;
-  width: 41px;
-  height: 37px;
+  width: 30px;
+  height: 30px;
   background: url(/base/images/icon_warning.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.btn-outbreak:hover {
+  background: url(/base/images/icon_warning_active.png) no-repeat 0 0;
   background-size: contain;
 }
 
@@ -932,6 +937,12 @@ table {
 
 .gnb {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 12px;
 }
 
@@ -944,8 +955,19 @@ table {
   width: 95%;
 }
 
+.gnb .box-wrap__algin--left {
+  float: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
 .gnb .box-wrap__algin--right {
-  padding: 12px 35px 0 0;
+  float: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-right: 35px;
 }
 
 .gnb .box-wrap__algin--right .btn-outbreak {
@@ -955,8 +977,8 @@ table {
 
 .gnb .box-wrap__algin--right .btn-outbreak .count {
   position: absolute;
-  top: -10px;
-  right: -12px;
+  top: -16px;
+  right: -20px;
   min-width: 15px;
   height: 25px;
   line-height: 1.78;
@@ -978,7 +1000,6 @@ table {
   height: 37px;
   line-height: 2.35;
   color: #fff;
-  vertical-align: top;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -988,8 +1009,14 @@ table {
 .gnb-list {
   position: absolute;
   top: 28px;
-  left: 350px;
+  left: 250px;
   z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 1070px;
 }
 
 .gnb-list::after {
@@ -1000,8 +1027,6 @@ table {
 
 .gnb-list > li {
   position: relative;
-  float: left;
-  min-width: 285px;
   min-height: 56px;
 }
 
@@ -2178,8 +2203,8 @@ table {
 /* 해상도 너비 : 0 ~ 1310px style */
 @media screen and (max-width: 1310px) {
   /* gnb 너비 조정 */
-  .gnb-list > li {
-    min-width: 245px;
+  .gnb-list {
+    width: 980px;
   }
 }
 
