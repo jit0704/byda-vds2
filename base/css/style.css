@@ -1494,6 +1494,11 @@ table {
   padding-right: 12px;
 }
 
+.table-borderless table tbody .become {
+  color: #6d707d;
+  font-weight: 700;
+}
+
 .table-borderless table tbody .flex__content.display span {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -2193,6 +2198,9 @@ table {
     width: 14.66% !important;
   }
   .modal-popup.mw1230 .table-borderless.camera td:nth-child(2) {
+    font-size: 14px;
+  }
+  .modal-popup.mw1230 .table-borderless .become {
     font-size: 14px;
   }
   .modal-popup.mw1230 .table-borderless .flex__content.display {
