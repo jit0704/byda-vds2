@@ -1503,7 +1503,11 @@ table {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  padding: 0 15px;
+  padding: 0 10px;
+}
+
+.table-borderless table tbody .flex__content.display .input__style2 {
+  text-align: center;
 }
 
 /* 헤더 고정 테이블(body scroll) */
