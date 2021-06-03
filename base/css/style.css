@@ -481,7 +481,7 @@ table {
 }
 
 .modal .modal-popup__btn.box-wrap__algin {
-  padding: 0 40px;
+  padding: 0 20px;
 }
 
 .modal .modal-popup__btn.box-wrap__algin .btn__regular + .btn__regular {
@@ -748,9 +748,10 @@ table {
 /* select */
 .select-box {
   position: relative;
-  height: 35px;
-  line-height: 35px;
+  height: 30px;
+  line-height: 2.1;
   padding: 0 28px 0px 10px;
+  font-size: 14px;
   color: #6d707d;
   font-weight: 700;
   border: 1px solid #d5d5d5;
@@ -1465,6 +1466,11 @@ table {
           box-sizing: border-box;
 }
 
+.table-borderless__tit .select-box {
+  margin-left: 15px;
+  vertical-align: top;
+}
+
 .table-borderless table {
   color: #000;
 }
@@ -2101,44 +2107,47 @@ table {
     width: 22% !important;
   }
   /* 장치관리 화면 */
-  .vds2200 .table-borderless.field col:nth-child(1) {
+  .vds8100 .table-borderless__tit .select-box {
+    vertical-align: baseline;
+  }
+  .vds8100 .table-borderless.field col:nth-child(1) {
     width: 19% !important;
   }
-  .vds2200 .table-borderless.field col:nth-child(2) {
+  .vds8100 .table-borderless.field col:nth-child(2) {
     width: 14.3% !important;
   }
-  .vds2200 .table-borderless.field col:nth-child(3) {
+  .vds8100 .table-borderless.field col:nth-child(3) {
     width: 18% !important;
   }
-  .vds2200 .table-borderless.field td {
+  .vds8100 .table-borderless.field td {
     letter-spacing: -1px;
   }
-  .vds2200 .table-borderless.field td:nth-child(2) {
+  .vds8100 .table-borderless.field td:nth-child(2) {
     font-size: 14px;
   }
-  .vds2200 .table-borderless.radar col:nth-child(1), .vds2200 .table-borderless.camera col:nth-child(1) {
+  .vds8100 .table-borderless.radar col:nth-child(1), .vds8100 .table-borderless.camera col:nth-child(1) {
     width: 19% !important;
   }
-  .vds2200 .table-borderless.radar col:nth-child(2), .vds2200 .table-borderless.camera col:nth-child(2) {
+  .vds8100 .table-borderless.radar col:nth-child(2), .vds8100 .table-borderless.camera col:nth-child(2) {
     width: 14.33% !important;
   }
-  .vds2200 .table-borderless.radar col:nth-child(3), .vds2200 .table-borderless.camera col:nth-child(3) {
+  .vds8100 .table-borderless.radar col:nth-child(3), .vds8100 .table-borderless.camera col:nth-child(3) {
     width: 18% !important;
   }
-  .vds2200 .table-borderless.radar col:nth-child(4), .vds2200 .table-borderless.camera col:nth-child(4) {
+  .vds8100 .table-borderless.radar col:nth-child(4), .vds8100 .table-borderless.camera col:nth-child(4) {
     width: 15.33% !important;
   }
-  .vds2200 .table-borderless.radar col:nth-child(5), .vds2200 .table-borderless.camera col:nth-child(5) {
+  .vds8100 .table-borderless.radar col:nth-child(5), .vds8100 .table-borderless.camera col:nth-child(5) {
     width: 19% !important;
   }
-  .vds2200 .table-borderless.radar col:nth-child(6), .vds2200 .table-borderless.camera col:nth-child(6) {
+  .vds8100 .table-borderless.radar col:nth-child(6), .vds8100 .table-borderless.camera col:nth-child(6) {
     width: 14.33% !important;
   }
-  .vds2200 .table-borderless.camera td:nth-child(2) {
+  .vds8100 .table-borderless.camera td:nth-child(2) {
     font-size: 14px;
   }
-  .vds2200 .table-borderless .flex__content.display {
-    margin-left: -90px;
+  .vds8100 .table-borderless .flex__content.display {
+    margin-left: -65px;
   }
   /* 컨텐츠 모달 팝업 */
   .modal-popup.mw1230 {

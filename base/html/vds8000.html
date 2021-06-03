@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>모니터링</title>
+    <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+    <script type="text/javascript" src="/base/js/common/includeHTML.js"></script> <!-- 퍼블리싱 확인용 include -->
+    <script type="text/javascript" src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="gnb-wrap" include-html="/base/html/common/gnb.html">
+      </div>
+      <!-- //gnb-wrap -->
+
+      <div class="container">
+        <div class="container__branch">
+          <div class="ly-left">
+            <div class="lnb" include-html="/base/html/common/lnb_branch.html">
+            </div>
+            <!-- //lnb -->
+          </div>
+          <!-- //ly-left -->
+
+          <div class="ly-right">
+            <h3 class="huge-tit">지점 관리</h3>
+            <!-- 화면 로딩시 비입력 모드는 각 form요소에 disabled 속성 추가해주시면 됩니다. -->
+            <div class="ly-right__content--vertical ">
+              <div class="btn-size2">
+                <button type="button" class="btn__regular btn__bg--style1">삭제</button>
+                <button type="button" class="btn__regular btn__bg--style1">저장</button>
+              </div>
+              <!-- //btn-size2 -->
+              <div class="unit-table table-borderless">
+                <table>
+                  <colgroup>
+                    <col style="width: 15%;">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th><span>지점명(상위)</span></th>
+                      <td>
+                        <select class="select-box">
+                          <option>사장교</option>
+                          <option>지점명2</option>
+                          <option>지점명3</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th><span>지점명</span></th>
+                      <td><input type="text" class="input__style2"></td>
+                    </tr>
+                    <tr>
+                      <th><span>정렬</span></th>
+                      <td><input type="text" class="input__style2"></td>
+                    </tr>
+                    <tr>
+                      <th><span>폴더여부</span></th>
+                      <td>
+                        <div class="radio--group">
+                          <label class="radio">
+                            <input type="radio" name="radio">
+                            <span class="txt">폴더</span>
+                          </label>
+                          <label class="radio">
+                            <input type="radio" name="radio">
+                            <span class="txt">지점</span>
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //unit-table -->
+            </div>
+            <!-- //ly-right__content--vertical -->
+            <footer class="copylight" include-html="/base/html/common/copylight.html"></footer>
+          </div>
+          <!-- //ly-right -->
+        </div>
+        <!-- //container__branch -->
+      </div>
+      <!-- //container -->
+
+    </div>
+    <!-- //wrapper -->
+
+    <script>
+      $(function(){
+        setTimeout(function(){ // setTimeout()은 퍼블리싱 확인용으로 개발에서는 적용X, 아래 lnb함수만 적용해주시면 됩니다.
+          lnbBranch.init(); // lnb 초기화 함수
+          lnbBranch.currentActive('#test3'); // 함수 파라미터 값 : 지점링크(a태그)의 ID값
+        }, 50);
+      });
+    </script>
+  </body>
+</html>
