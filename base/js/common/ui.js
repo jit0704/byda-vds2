@@ -27,7 +27,7 @@ $(window).on('load', function(){
         $copy.removeClass('modify');
       }
     } else if (1901 < $winW) {
-      if ($bodyH === $lyRightH || $bodyH < $lyRightH) {
+      if ($bodyH === $lyRightH || $bodyH > $lyRightH) {
         $copy.addClass('modify');
       } else {
         $copy.removeClass('modify');
