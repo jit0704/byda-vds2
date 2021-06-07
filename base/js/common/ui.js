@@ -100,13 +100,21 @@ function loginForm () {
   });
 }
 
-// unit요소 안에 bodyscroll요소의 높이값 셋팅 (210425 추가)
+// unit요소 안에 bodyscroll요소의 높이값 셋팅 (210607 수정)
 function unitBodyscrollHeight () {
   var $tblEl = $('.list-table__inner');
   var $ancestorH;
+  var $ancestorH2 = $('.ly-right').height() - ( $('.huge-tit').innerHeight() + $('.unit__statis').outerHeight() + 95 + 45 );
   $tblEl.closest('.unit').addClass('is-bodyscroll');
   $ancestorH = $tblEl.closest('.is-bodyscroll').height();
-  $tblEl.css('height', $ancestorH - 80); // 210508 수정
+
+  if ( $('.ratio--6-4').length !== 0 ) {
+    $tblEl.css('height', $ancestorH - 80);
+  }
+  if ( $('.ratio--3-7').length !== 0 ) {
+    $tblEl.css('height', $ancestorH2);
+    $('.ratio--3-7 .video__fluid').css('padding-bottom', ( $('.unit__statis').outerHeight() + $('.is-bodyscroll').outerHeight(true) ) - 32);
+  }
 }
 
 // lnb (210427 수정) 

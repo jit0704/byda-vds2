@@ -300,8 +300,16 @@ table {
           flex: 1 0 auto;
 }
 
+.ly-right .ratio--3-7 .ly-right__content--left .video__fluid__el video {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .ly-right .ratio--3-7 .ly-right__content--right {
-  width: 1000px;
+  -webkit-box-flex: 2.3;
+      -ms-flex: 2.3 0 auto;
+          flex: 2.3 0 auto;
+  width: auto;
 }
 
 .ly-right .ratio--3-7 .ly-right__content--right .unit {
@@ -1948,6 +1956,19 @@ table {
           transform: translate(-50%, -50%);
 }
 
+.pop-video--expand.vertical {
+  width: 442px;
+}
+
+.pop-video--expand.vertical .video__fluid {
+  padding-bottom: 156.25%;
+}
+
+.pop-video--expand.vertical .video__fluid video {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .pop-video--expand .unit {
   height: 100%;
   border: 0;
@@ -2151,6 +2172,15 @@ table {
   }
   .pop-video--expand {
     width: 900px;
+  }
+  .ly-right .ratio--3-7 .ly-right__content--left .video__fluid__el video {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .ly-right .ratio--3-7 .ly-right__content--right {
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5 0 auto;
+            flex: 0.5 0 auto;
   }
   /* 지점관리 화면 */
   .container__branch .table-borderless table col:first-child {
