@@ -171,13 +171,19 @@ table {
 }
 
 .list-wrap {
-  padding: 120px 40px 0;
+  padding: 90px 40px 0;
 }
 
 .form-group {
   margin-bottom: 20px;
-  padding-bottom: 20px;
+  padding: 20px 0;
   border-bottom: 1px solid #74748a;
+}
+
+.form-group .select-box {
+  height: 33px;
+  line-height: 2.35;
+  background-color: #fff;
 }
 
 /* lnb+컨텐츠 형식 레이아웃 */
@@ -332,14 +338,14 @@ table {
   vertical-align: middle;
 }
 
-.ly-right .copylight {
+.copylight {
   padding: 5px 0;
   border-top: 1px solid #dbdee2;
   font-size: 12px;
   text-align: center;
 }
 
-.ly-right .copylight.modify {
+.copylight.modify {
   position: absolute;
   left: 0;
   right: 0;
@@ -1405,27 +1411,39 @@ table {
   right: -2px;
 }
 
+/* 차트 영역 */
+.chart-wrap {
+  padding-bottom: 15px;
+}
+
+.chart__group + .chart__group {
+  margin-top: 30px;
+}
+
 /* 목록 화면 */
 .list-table__group {
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 
 .list-table__group .list-table tbody td {
   height: 50px;
 }
 
-.list-table__title {
+.list-table__title,
+.chart__group__title {
   margin-bottom: 10px;
   font-size: 20px;
   color: #3a4e63;
 }
 
-.list-table__title .box-wrap__algin--left {
+.list-table__title .box-wrap__algin--left,
+.chart__group__title .box-wrap__algin--left {
   padding-left: 2px;
   line-height: 40px;
 }
 
-.list-table__title .box-wrap__algin--left::before {
+.list-table__title .box-wrap__algin--left::before,
+.chart__group__title .box-wrap__algin--left::before {
   content: "";
   display: inline-block;
   width: 12px;
@@ -2335,4 +2353,3 @@ table {
     line-height: 30px;
   }
 }
-/*# sourceMappingURL=style.css.map */

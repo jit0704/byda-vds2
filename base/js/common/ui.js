@@ -16,18 +16,19 @@ $(window).on('load', function(){
   $(window).on('resize', function(){
     var $winW = $(window).width();
     var $bodyH = parseInt($('body').height());
-    var $lyRightH = parseInt($('.ly-right').prop('scrollHeight'));
+    var $conH = parseInt($('.container').prop('scrollHeight')); //210608 수정
     var $copy = $('.copylight');
-    // console.log(`$bodyH:${$bodyH}`, `$lyRightH:${$lyRightH}`);
+    // console.log(`$bodyH:${$bodyH}`, `$conH:${$conH}`);
+    console.log($conH);
 
     if (0 < $winW && 1900 > $winW) {
-      if ($bodyH === $lyRightH) {
+      if ($bodyH === $conH) { //210608 수정
         $copy.addClass('modify');
       } else {
         $copy.removeClass('modify');
       }
     } else if (1901 < $winW) {
-      if ($bodyH === $lyRightH || $bodyH > $lyRightH) {
+      if ($bodyH === $conH || $bodyH > $conH) { //210608 수정
         $copy.addClass('modify');
       } else {
         $copy.removeClass('modify');
