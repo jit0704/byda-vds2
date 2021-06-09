@@ -19,7 +19,6 @@ $(window).on('load', function(){
     var $conH = parseInt($('.container').prop('scrollHeight')); //210608 수정
     var $copy = $('.copylight');
     // console.log(`$bodyH:${$bodyH}`, `$conH:${$conH}`);
-    console.log($conH);
 
     if (0 < $winW && 1900 > $winW) {
       if ($bodyH === $conH) { //210608 수정

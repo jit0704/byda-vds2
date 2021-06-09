@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>통계관리 - 지점별 조회(방향)</title>
+    <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+    <script type="text/javascript" src="/base/js/common/includeHTML.js"></script> <!-- 퍼블리싱 확인용 include -->
+    <script type="text/javascript" src="/base/js/lib/datepicker.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/datepicker.ko-KR.js"></script>
+    <script type="text/javascript" src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="/base/css/datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="gnb-wrap" include-html="/base/html/common/gnb.html">
+      </div>
+      <!-- //gnb-wrap -->
+
+      <div class="container">
+
+        <div class="ly-left">
+          <div class="lnb" include-html="/base/html/common/lnb.html">
+          </div>
+          <!-- //lnb -->
+        </div>
+        <!-- //ly-left -->
+
+        <div class="ly-right">
+          <div class="list-wrap">
+            <div class="form-group">
+              <div class="form-group__inquiry">
+                <div class="form-group__inquiry--bind">
+                  <em>조회일</em>
+                  <span class="form-bind">
+                    <input type="text" class="input-calendar input__style1" data-toggle="datepicker">
+                    <select class="select-box">
+                      <option value="">전체</option>
+                    </select>
+                    <div class="radio--group ml15">
+                      <label class="radio">
+                        <input type="radio" name="radio">
+                        <span class="txt">방향</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="radio">
+                        <span class="txt">차로</span>
+                      </label>
+                    </div>
+                  </span>
+                </div>
+                <!-- //form-group__inquiry--bind -->
+                <a href="#" class="btn__inquiry btn__bg--style1">조회</a>
+              </div>
+              <!-- //form-group__inquiry -->
+            </div>
+            <!-- //form-group -->
+  
+            <div class="list-table__group">
+              <div class="list-table__title box-wrap__algin">
+                <span class="box-wrap__algin--left">2021-04-02 또는 2021-04-02 15시</span>
+                <span class="box-wrap__algin--right">
+                  <a href="#" class="btn-default">Excel Down</a>
+                </span>
+              </div>
+              <!-- //box-wrap__algin -->
+              <div class="list-table">
+                <table class="list-table__bordered">
+                  <thead>
+                    <tr>
+                      <th>지점</th>
+                      <th>방향</th>
+                      <th>교통량 (대)</th>
+                      <th>평균속도 (km/h)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>송도방면 STA 9+990</td>
+                      <td>공항방면</td>
+                      <td>5,557</td>
+                      <td>87</td>
+                    </tr>
+                    <tr>
+                      <td>송도방면 STA 9+990</td>
+                      <td>공항방면</td>
+                      <td>5,557</td>
+                      <td>87</td>
+                    </tr>
+                    <tr>
+                      <td>송도방면 STA 9+990</td>
+                      <td>공항방면</td>
+                      <td>5,557</td>
+                      <td>87</td>
+                    </tr>
+                    <tr>
+                      <td>송도방면 STA 9+990</td>
+                      <td>공항방면</td>
+                      <td>5,557</td>
+                      <td>87</td>
+                    </tr>
+                    <tr>
+                      <td>송도방면 STA 9+990</td>
+                      <td>공항방면</td>
+                      <td>5,557</td>
+                      <td>87</td>
+                    </tr>
+                    <tr>
+                      <td>송도방면 STA 9+990</td>
+                      <td>공항방면</td>
+                      <td>5,557</td>
+                      <td>87</td>
+                    </tr>
+                    <tr>
+                      <td>송도방면 STA 9+990</td>
+                      <td>공항방면</td>
+                      <td>5,557</td>
+                      <td>87</td>
+                    </tr>
+                    <tr>
+                      <td>송도방면 STA 9+990</td>
+                      <td>공항방면</td>
+                      <td>5,557</td>
+                      <td>87</td>
+                    </tr>
+                    <tr>
+                      <td>송도방면 STA 9+990</td>
+                      <td>공항방면</td>
+                      <td>5,557</td>
+                      <td>87</td>
+                    </tr>
+                    <tr>
+                      <td>송도방면 STA 9+990</td>
+                      <td>공항방면</td>
+                      <td>5,557</td>
+                      <td>87</td>
+                    </tr>
+                    <tr>
+                      <td>송도방면 STA 9+990</td>
+                      <td>공항방면</td>
+                      <td>5,557</td>
+                      <td>87</td>
+                    </tr>
+                    <tr>
+                      <td>2021-04-02 13</td>
+                      <td>공항방면</td>
+                      <td>5,557</td>
+                      <td>87</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //list-table -->
+
+              <div class="list-table__paging" include-html="/base/html/common/paging.html"></div>
+            </div>
+            <!-- //list-table__group -->
+          </div>
+          <!-- //list-wrap -->
+
+          <footer class="copylight" include-html="/base/html/common/copylight.html"></footer>
+        </div>
+        <!-- //ly-right -->
+      </div>
+      <!-- //container -->
+
+    </div>
+    <!-- //wrapper -->
+
+    <script>
+      $(function(){
+        setTimeout(function(){ // setTimeout()은 퍼블리싱 확인용으로 개발에서는 적용X, 아래 lnb함수만 적용해주시면 됩니다.
+          lnb.init(); // lnb 초기화 함수
+          lnb.currentActive('#test2'); // 함수 파라미터 값 : 지점링크(a태그)의 ID값
+        }, 50);
+      });
+    </script>
+  </body>
+</html>
