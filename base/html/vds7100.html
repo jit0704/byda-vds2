@@ -106,56 +106,26 @@
         const ids = el.getAttribute('id');
         Highcharts.chart(ids, {
           chart: {
-              type: 'column'
+              type: 'line'
           },
           title: {
-              text: '2021-04-11, Sun 인천대교 사장교 9+990 송도방향'
+              text: ''
           },
           xAxis: {
               categories: ['00시', '01시', '02시', '03시', '04시', '05시', '06시', '07시', '08시', '09시', '10시', '11시', '12시', '13시', '14시', '15시', '16시', '17시', '18시', '19시', '20시', '21시', '22시', '23시']
           },
           yAxis: {
-              min: 0,
               title: {
                   text: ''
-              },
-              stackLabels: {
-                  enabled: true,
-                  style: {
-                      fontWeight: 'bold',
-                      color: ( // theme
-                          Highcharts.defaultOptions.title.style &&
-                          Highcharts.defaultOptions.title.style.color
-                      ) || 'gray'
-                  }
               }
           },
           colors: ['#0d233a', '#910000'],
-          legend: {
-              align: 'right',
-              x: -30,
-              verticalAlign: 'top',
-              y: 25,
-              floating: true,
-              backgroundColor:
-                  Highcharts.defaultOptions.legend.backgroundColor || 'white',
-              borderColor: '#CCC',
-              borderWidth: 1,
-              shadow: false
-          },
-          tooltip: {
-              headerFormat: '<b>{point.x}</b><br/>',
-              pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
-          },
           plotOptions: {
-              column: {
-                  stacking: 'normal',
+              line: {
                   dataLabels: {
                       enabled: true
                   },
-                  animation: {
-                    duration: 0
-                  }
+                  enableMouseTracking: false,
               }
           },
           series: [{

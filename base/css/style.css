@@ -1210,6 +1210,7 @@ table {
   display: inline-block;
   margin-right: 15px;
   color: #212637;
+  vertical-align: middle;
 }
 
 .form-group__inquiry--bind + .form-group__inquiry--bind {
@@ -1222,6 +1223,11 @@ table {
 
 .form-bind {
   display: inline-block;
+  vertical-align: middle;
+}
+
+.form-bind > * {
+  vertical-align: middle;
 }
 
 .form-wave {
@@ -2108,6 +2114,20 @@ table {
   }
   .radio .txt {
     font-size: 22px;
+  }
+  .form-group__inquiry--bind em {
+    font-size: 22px;
+  }
+  .form-group__inquiry--bind .form-bind .input-calendar,
+  .form-group__inquiry--bind .form-bind .select-box {
+    height: 45px;
+    line-height: 45px;
+  }
+  .form-group__inquiry .btn__inquiry {
+    height: 45px;
+    line-height: 45px;
+    font-size: 22px;
+    padding: 0 25px;
   }
   .ly-right .huge-tit {
     font-size: 30px;
