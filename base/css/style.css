@@ -135,6 +135,10 @@ table {
   padding-right: 0 !important;
 }
 
+.pdb0 {
+  padding-bottom: 0 !important;
+}
+
 .pdb10 {
   padding-bottom: 10px !important;
 }
@@ -1517,6 +1521,18 @@ table {
   line-height: 20px;
   background: #fff;
   color: #212529;
+}
+
+.list-table.type2 thead th {
+  border: 1px solid #dee2e6;
+}
+
+.list-table.type2 tbody td + td {
+  border-left: 1px solid #dee2e6;
+}
+
+.list-table.type2 tbody tr:last-child td {
+  border-bottom: 1px solid #dee2e6;
 }
 
 .list-table__half > .box-wrap__algin--left,
