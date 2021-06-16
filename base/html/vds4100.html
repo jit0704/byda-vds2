@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>My Profile</title>
+    <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+    <script type="text/javascript" src="/base/js/common/includeHTML.js"></script> <!-- 퍼블리싱 확인용 include -->
+    <script type="text/javascript" src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="gnb-wrap" include-html="/base/html/common/gnb.html">
+      </div>
+      <!-- //gnb-wrap -->
+
+      <div class="container">
+        <div class="ly--unit-table">
+          <h3 class="huge-tit">My Profile</h3>
+          <div class="unit-table-wrap">
+            <button type="button" class="btn__regular btn__bg--style1">저장</button>
+            <div class="inner">
+              <div class="unit-table table-borderless">
+                <em class="table-borderless__tit">관리자 정보</em>
+                <table>
+                  <colgroup>
+                    <col style="width:13%;">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th><span>관리자 ID</span></th>
+                      <td><input type="text" class="input__style2"></td>
+                    </tr>
+                    <tr>
+                      <th><span>관리자 명</span></th>
+                      <td><input type="text" class="input__style2"></td>
+                    </tr>
+                    <tr>
+                      <th><span>Email</span></th>
+                      <td><input type="text" class="input__style2"></td>
+                    </tr>
+                    <tr>
+                      <th><span>전화번호</span></th>
+                      <td><input type="text" class="input__style2"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //unit-table -->
+
+              <div class="unit-table table-borderless mb12">
+                <em class="table-borderless__tit">비밀번호 변경</em>
+                <table>
+                  <colgroup>
+                    <col style="width:13%;">
+                    <col>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th><span>현재 비밀번호</span></th>
+                      <td><input type="password" class="input__style2"></td>
+                    </tr>
+                    <tr>
+                      <th><span>비밀번호</span></th>
+                      <td><input type="password" class="input__style2"></td>
+                    </tr>
+                    <tr>
+                      <th><span>비밀번호 확인</span></th>
+                      <td><input type="password" class="input__style2"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- //unit-table -->
+            </div>
+            <!-- //inner -->
+          </div>
+          <!-- //unit-table-wrap -->
+        </div>
+        <!-- //ly--unit-table -->
+
+        <footer class="copylight" include-html="/base/html/common/copylight.html"></footer>
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //wrapper -->
+  </body>
+</html>

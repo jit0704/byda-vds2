@@ -123,6 +123,10 @@ table {
   color: yellow !important;
 }
 
+.mb12 {
+  margin-bottom: 12px !important;
+}
+
 .ml15 {
   margin-left: 15px !important;
 }
@@ -338,13 +342,13 @@ table {
   height: auto;
 }
 
-.ly-right .huge-tit {
+.huge-tit {
   padding: 15px 0;
   font-size: 24px;
   color: #3a4e63;
 }
 
-.ly-right .huge-tit::before {
+.huge-tit::before {
   content: "";
   display: inline-block;
   width: 12px;
@@ -1392,6 +1396,74 @@ table {
   background: #1f2a35;
 }
 
+/* profile */
+.profile {
+  position: fixed;
+  top: 0;
+  bottom: 25px;
+  right: -320px;
+  z-index: 2;
+  width: 320px;
+  -webkit-transition: right 0.2s;
+  transition: right 0.2s;
+  background: #2A3F54;
+}
+
+.profile.active {
+  right: 0;
+}
+
+.profile__head {
+  position: relative;
+  height: 90px;
+  padding: 30px 0;
+  text-align: center;
+  background: #1c2f42;
+}
+
+.profile__head h2 {
+  color: #fff;
+}
+
+.profile__head .btn-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.profile__list {
+  padding: 20px;
+  color: #fff;
+}
+
+.profile__list li {
+  font-weight: 400;
+}
+
+.profile__list li + li {
+  margin-top: 20px;
+}
+
+.profile__list li .btn__logout {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 800;
+}
+
+.profile__list li .btn__logout:hover {
+  text-decoration: underline;
+}
+
+.profile-update .btn__inquiry {
+  margin-left: 10px;
+}
+
+.profile-update--txt {
+  margin-top: 8px;
+  padding-left: 5px;
+  font-size: 12px;
+}
+
 /* 비디오 영역 */
 .video__fluid {
   position: relative;
@@ -1932,6 +2004,10 @@ table {
 }
 
 /* 페이지에 삽입되는 팝업 테이블과 디자인이 동일한 일반 테이블 */
+.ly--unit-table {
+  padding: 90px 40px 0;
+}
+
 .unit-table {
   padding: 10px 10px 0;
   background: #fff;
