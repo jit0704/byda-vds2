@@ -76,7 +76,7 @@ table {
   border-spacing: 0;
 }
 
-.hidden, legend {
+.hidden, legend, figcaption {
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -609,6 +609,18 @@ table {
 /* --------------------------------------------
   공통 컴포넌트
 ---------------------------------------------- */
+/* 딤드 */
+.dimmed {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
 /* floating */
 .box-wrap__algin::after {
   content: "";
@@ -1396,24 +1408,24 @@ table {
   background: #1f2a35;
 }
 
-/* profile */
-.profile {
+/* nav */
+.nav {
   position: fixed;
   top: 0;
   bottom: 25px;
   right: -320px;
-  z-index: 2;
+  z-index: 3;
   width: 320px;
   -webkit-transition: right 0.2s;
   transition: right 0.2s;
-  background: #2A3F54;
+  background: #f7f7f7;
 }
 
-.profile.active {
+.nav.active {
   right: 0;
 }
 
-.profile__head {
+.nav__head {
   position: relative;
   height: 90px;
   padding: 30px 0;
@@ -1421,46 +1433,139 @@ table {
   background: #1c2f42;
 }
 
-.profile__head h2 {
+.nav__head h2 {
   color: #fff;
 }
 
-.profile__head .btn-close {
+.nav__head .btn-close {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 26px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  background-size: contain;
 }
 
-.profile__list {
+.nav__list {
   padding: 20px;
   color: #fff;
 }
 
-.profile__list li {
+.nav__list li {
+  color: #000;
   font-weight: 400;
 }
 
-.profile__list li + li {
+.nav__list li + li {
   margin-top: 20px;
 }
 
-.profile__list li .btn__logout {
-  font-size: 18px;
+.nav--outbreak {
+  overflow: hidden;
+}
+
+.nav--outbreak h2::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: -2px 10px 0 0;
+  vertical-align: middle;
+  background: url(/base/images/icon_warning_active.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.nav--outbreak .btn-close {
+  top: 28px;
+}
+
+.nav--outbreak .nav__list li {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.nav--outbreak .nav__list li + li {
+  margin-top: 10px;
+}
+
+.nav--outbreak .nav__list li p {
+  line-height: 25px;
+  font-weight: 700;
+  color: #d00404;
+}
+
+.nav--profile li {
+  position: relative;
+  padding-left: 45px;
+}
+
+.nav--profile li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.nav--profile .name::before {
+  margin-top: 5px;
+  background: url(/base/images/icon_person2.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.nav--profile .name span {
+  display: block;
+}
+
+.nav--profile .name span:first-child {
+  font-weight: 700;
+}
+
+.nav--profile .email::before {
+  height: 21px;
+  background: url(/base/images/icon_email.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.nav--profile .set {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.nav--profile .set::before {
+  top: 10px;
+  margin-top: 3px;
+  background: url(/base/images/icon_set2.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.nav--profile .logout::before {
+  background: url(/base/images/icon_power.png) no-repeat 50% 50%;
+  background-size: 25px;
+}
+
+.nav--profile .logout .btn__logout {
+  display: inline-block;
+  padding: 0 10px;
+  line-height: 32px;
   color: #fff;
-  font-weight: 800;
+  background: #ccc;
+  border-radius: 3px;
 }
 
-.profile__list li .btn__logout:hover {
-  text-decoration: underline;
+.nav .profile-update .tit {
+  font-weight: 700;
 }
 
-.profile-update .btn__inquiry {
+.nav .profile-update .btn__inquiry {
   margin-left: 10px;
 }
 
-.profile-update--txt {
+.nav .profile-update--txt {
   margin-top: 8px;
-  padding-left: 5px;
   font-size: 12px;
 }
 
@@ -1520,6 +1625,16 @@ table {
 
 .chart__group + .chart__group {
   margin-top: 30px;
+}
+
+/* snap 사진 */
+.snap-img {
+  width: 650px;
+  margin-bottom: 30px;
+}
+
+.snap-img img {
+  width: 100%;
 }
 
 /* 목록 화면 */
@@ -2454,6 +2569,10 @@ table {
   /* gnb 너비 조정 */
   .gnb-list {
     width: 980px;
+  }
+  .gnb .box-wrap__algin--right {
+    position: relative;
+    z-index: 2;
   }
 }
 
