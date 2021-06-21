@@ -139,6 +139,10 @@ table {
   padding-right: 0 !important;
 }
 
+.pdt10 {
+  padding-top: 10px !important;
+}
+
 .pdb0 {
   padding-bottom: 0 !important;
 }
@@ -556,6 +560,16 @@ table {
   margin-left: 10px;
 }
 
+.modal .modal-popup__btn.sm-size {
+  margin: 20px 0;
+}
+
+.modal .modal-popup__btn.sm-size .btn__regular {
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+}
+
 .modal .modal-popup__alert {
   width: 550px;
   min-width: auto;
@@ -654,6 +668,15 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+/* 아이콘 */
+.icon-outbreak {
+  display: inline-block;
+  width: 50px;
+  height: 45px;
+  background: url(/base/images/icon_warning_red.png) no-repeat 0 0;
+  background-size: contain;
 }
 
 /* 버튼 */
@@ -1412,7 +1435,7 @@ table {
 .nav {
   position: fixed;
   top: 0;
-  bottom: 25px;
+  bottom: 0;
   right: -320px;
   z-index: 3;
   width: 320px;
@@ -1529,14 +1552,14 @@ table {
 }
 
 .nav--profile .set {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
 
 .nav--profile .set::before {
-  top: 10px;
+  top: 20px;
   margin-top: 3px;
   background: url(/base/images/icon_set2.png) no-repeat 0 0;
   background-size: contain;
