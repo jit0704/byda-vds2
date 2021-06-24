@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>돌발 모니터링</title>
+    <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+    <script type="text/javascript" src="/base/js/common/includeHTML.js"></script> <!-- 퍼블리싱 확인용 include -->
+    <script type="text/javascript" src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="gnb-wrap" include-html="/base/html/common/gnb.html">
+      </div>
+      <!-- //gnb-wrap -->
+
+      <div class="container monitering-outbreak">
+
+        <div class="ly-left">
+          <div class="lnb lnb--outbreak" include-html="/base/html/common/lnb_outbreak.html">
+          </div>
+          <!-- //lnb -->
+        </div>
+        <!-- //ly-left -->
+
+        <div class="ly-right">
+          <h3 class="huge-tit"># 사장교 :: 9+990 송도방향</h3>
+          <div class="ly-right__content ratio--100per">
+            <div class="unit-table-wrap vds6200">
+              <div class="flex__content flex__content--jusi-sb">
+                <a href="#player" class="btn__regular btn__bg--style1">player</a>
+                <a href="#snap" class="btn__regular btn__bg--style1">snap</a>
+                <a href="#" class="btn__regular btn__bg--style1">무시</a>
+                <a href="#" class="btn__regular btn__bg--style1">돌발</a>
+              </div>
+              
+              <div class="inner">
+                <div class="unit-table table-borderless radar">
+                  <em class="table-borderless__tit">
+                    <span class="txt">돌발 정보</span>
+                  </em>
+                  <table>
+                    <colgroup>
+                      <col style="width:15%;">
+                      <col style="width:18.33%;">
+                      <col style="width:15%;">
+                      <col style="width:18.33%;">
+                      <col style="width:15%;">
+                      <col style="width:18.33%;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th><span>이벤트</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                        <th><span>차로</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                        <th><span>차종</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                      </tr>
+                      <tr>
+                        <th><span>속도</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                        <th><span>발생거리</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                        <th><span>발생일시</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //unit-table -->
+
+                <div class="unit-table table-borderless radar">
+                  <em class="table-borderless__tit">
+                    <span class="txt">RADAR 정보</span>
+                  </em>
+                  <table>
+                    <colgroup>
+                      <col style="width:15%;">
+                      <col style="width:18.33%;">
+                      <col style="width:15%;">
+                      <col style="width:18.33%;">
+                      <col style="width:15%;">
+                      <col style="width:18.33%;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th><span>로컬 제어기 ID</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                        <th><span>로컬 제어기 IP</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                        <th><span>로컬 제어기 PORT</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                      </tr>
+                      <tr>
+                        <th><span>RADAR 제어 ID</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                        <th><span>RADAR 제어 IP</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                        <th><span>RADAR 제어 PORT</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //unit-table -->
+
+                <div class="unit-table table-borderless camera">
+                  <em class="table-borderless__tit">
+                    <span class="txt">CAMERA 정보</span>
+                  </em>
+                  <table>
+                    <colgroup>
+                      <col style="width:15%;">
+                      <col style="width:18.33%;">
+                      <col style="width:15%;">
+                      <col style="width:18.33%;">
+                      <col style="width:15%;">
+                      <col style="width:18.33%;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th><span>CAMERA ID</span></th>
+                        <td style="padding-left:8px;">AUTO</td>
+                        <th><span>CAMERA IP</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                        <th><span>CAMERA PORT</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                      </tr>
+                      <tr>
+                        <th><span>Application Name</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                        <th><span>Stream Name</span></th>
+                        <td><input type="text" class="input__style2"></td>
+                        <th><span>해상도</span></th>
+                        <td>
+                          <div class="flex__content display">
+                            <input type="text" class="input__style2">
+                            <span>X</span>
+                            <input type="text" class="input__style2">
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th><span>Stream URL</span></th>
+                        <td colspan="5"><input type="text" class="input__style2"></td>
+                      </tr>
+                      <tr>
+                        <th><span>RTSP 주소</span></th>
+                        <td colspan="5"><input type="text" class="input__style2"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //unit-table -->
+              </div>
+              <!-- //inner -->
+            </div>
+            <!-- //unit-table-wrap -->
+          </div>
+          <!-- //ly-right__content -->
+
+          <footer class="copylight" include-html="/base/html/common/copylight.html"></footer>
+        </div>
+        <!-- //ly-right -->
+      </div>
+      <!-- //container -->
+
+      <div id="player" class="pop-video--expand">
+        <div class="unit">
+          <em class="unit__tit">사장교 :: 9+990 송도방향 [3차로][역주행]
+            <button type="button" class="btn-close btn-close--white"><span class="hidden">팝업 닫기</span></button>
+          </em>
+          <div class="unit__content video__fluid">
+            <div id="" class="video__fluid__el">
+              <video autoplay playsinline controls muted width="100%" height="100%">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                <!-- <source src="../winter.mp4" type="video/mp4"> -->
+              </video>
+            </div>
+          </div>
+        </div>
+        <!-- //unit -->
+      </div>
+      <!-- //pop-video--expand -->
+
+      <div id="snap" class="pop-img--expand">
+        <div class="unit">
+          <em class="unit__tit">사장교 :: 9+990 송도방향 [3차로][역주행]
+            <button type="button" class="btn-close btn-close--white"><span class="hidden">팝업 닫기</span></button>
+          </em>
+          <div class="unit__content">
+            <figure class="snap-img">
+              <img src="https://via.placeholder.com/800X800?text=sample+img" alt="">
+              <figcaption>스냅사진</figcaption>
+            </figure>
+          </div>
+        </div>
+        <!-- //unit -->
+      </div>
+      <!-- //pop-img--expand -->
+
+    </div>
+    <!-- //wrapper -->
+
+    <script>
+      $(function(){
+        // 돌발 영상 팝업
+        var $btnPlayer = $('a[href="#player"]');
+        var $popEl = $('.pop-video--expand');
+        var $btnClose = $('.btn-close', $popEl);
+        $btnPlayer.on('click', function(e){
+          e.preventDefault();
+          var $hash = $(this).attr('href');
+          $($hash).css('width', '800px').fadeIn(150);
+        });
+        $btnClose.on('click', function(){
+          $(this).closest($popEl).fadeOut(150);
+          $('body').css('overflow', 'auto');
+        });
+        $popEl.draggable({
+          containment: '.wrapper',
+          drag: function () {
+            $(this).css('transform', 'none');
+          },
+          start: function () {
+            $('body').css('overflow', 'hidden');
+            $popImgEl.css('z-index', '5');
+            $(this).css('z-index', '6');
+          },
+          stop: function () {
+            $(this).css('z-index', '6');
+          }
+        });
+        $popEl.resizable({
+          containment: '.wrapper',
+          minWidth: 450,
+          resize: function () {
+            $(this).css('height', $(this).find('video').height() + 53);
+          }
+        });
+
+        // 스냅 사진 팝업
+        var $btnSnap = $('a[href="#snap"]');
+        var $popImgEl = $('.pop-img--expand');
+        var $popImgbtnClose = $('.btn-close', $popImgEl);
+        $btnSnap.on('click', function(e){
+          e.preventDefault();
+          var $hash = $(this).attr('href');
+          $($hash).fadeIn(150);
+        });
+        $popImgbtnClose.on('click', function(){
+          $(this).closest($popImgEl).fadeOut(150);
+          $('body').css('overflow', 'auto');
+        });
+        $popImgEl.draggable({
+          containment: '.wrapper',
+          drag: function () {
+            $(this).css('transform', 'none');
+          },
+          start: function () {
+            $('body').css('overflow', 'hidden');
+            $popEl.css('z-index', '5');
+            $(this).css('z-index', '6');
+          },
+          stop: function () {
+            $(this).css('z-index', '6');
+          }
+        });
+        $popImgEl.resizable({
+          containment: '.wrapper',
+          minWidth: 450,
+          resize: function () {
+            $(this).css('height', $(this).find('img').height() + 53);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

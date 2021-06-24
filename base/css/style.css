@@ -123,6 +123,10 @@ table {
   color: yellow !important;
 }
 
+.txt-black {
+  color: #212529 !important;
+}
+
 .mb12 {
   margin-bottom: 12px !important;
 }
@@ -704,6 +708,10 @@ table {
   background: #484950;
 }
 
+.btn__bg--style4 {
+  background: #ccc;
+}
+
 .btn__inquiry {
   display: inline-block;
   height: 33px;
@@ -897,14 +905,16 @@ table {
   display: inline-block;
   width: 25px;
   height: 25px;
-  background: #49516d;
+  background: #fff;
   border-radius: 4px;
+  border: 1px solid #ccc;
   vertical-align: middle;
   cursor: pointer;
 }
 
 .check-box input:checked + label {
   background: url(/base/images/icon_check.png) no-repeat 50% 50% #4d85ff;
+  border-color: transparent;
 }
 
 .check-box input:disabled + label {
@@ -913,6 +923,18 @@ table {
 
 .check-box span {
   display: none;
+}
+
+.check-box--type2 {
+  margin-right: 90px;
+}
+
+.check-box--type2 label span {
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 35px;
+  white-space: nowrap;
 }
 
 /* 라디오 버튼 */
@@ -1431,6 +1453,42 @@ table {
   background: #1f2a35;
 }
 
+.lnb--outbreak {
+  height: calc(100% - 60px);
+}
+
+.lnb--outbreak .lnb__list {
+  padding: 15px 15px 0;
+}
+
+.lnb--outbreak .lnb__list a {
+  display: block;
+  padding-bottom: 10px;
+  font-size: 14px;
+  color: #ECF0F1;
+  border-bottom: 1px solid #ccc;
+}
+
+.lnb--outbreak .lnb__list a + a {
+  margin-top: 10px;
+}
+
+.lnb--outbreak .lnb__list a.active {
+  color: #4d85ff;
+}
+
+.lnb--outbreak .lnb__list p {
+  line-height: 22px;
+}
+
+.lnb--outbreak .list-table__paging {
+  padding: 18px 0;
+}
+
+.lnb--outbreak .list-table__paging a {
+  color: #fff;
+}
+
 /* nav */
 .nav {
   position: fixed;
@@ -1691,6 +1749,13 @@ table {
   margin: -4px 8px 0 0;
   background: #2A3F54;
   vertical-align: middle;
+}
+
+.list-table__title .box-wrap__algin--right .btn__inquiry,
+.chart__group__title .box-wrap__algin--right .btn__inquiry {
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
 }
 
 .list-table .no-data {
@@ -2157,7 +2222,24 @@ table {
   height: 100%;
 }
 
-.unit-table-wrap .btn__regular {
+.unit-table-wrap > .flex__content {
+  position: absolute;
+  top: -51px;
+  right: 0;
+  width: 400px;
+}
+
+.unit-table-wrap > .flex__content .btn__regular {
+  height: auto;
+  padding: 6.5px 0;
+  line-height: normal;
+}
+
+.unit-table-wrap > .flex__content .btn__regular + .btn__regular {
+  margin-left: 10px;
+}
+
+.unit-table-wrap > .btn__regular {
   position: absolute;
   top: -51px;
   right: 0;
@@ -2258,6 +2340,44 @@ table {
   right: 15px;
 }
 
+/* 돌발 모니터링 화면 > 스냅 사진 팝업 */
+.pop-img--expand {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  width: 600px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.pop-img--expand .unit {
+  height: 100%;
+  border: 0;
+}
+
+.pop-img--expand .unit__tit {
+  line-height: 50px;
+  padding: 0 20px;
+  background: #2e3345;
+  font-size: 18px;
+  color: #fff;
+  cursor: move;
+}
+
+.pop-img--expand .unit .snap-img {
+  width: auto;
+  margin-bottom: 0;
+}
+
+.pop-img--expand .btn-close {
+  position: absolute;
+  top: 6px;
+  right: 15px;
+}
+
 /* 지점 관리 페이지 */
 .container__branch {
   height: 100%;
@@ -2283,6 +2403,15 @@ table {
 /* 장치관리 팝업 */
 .modal-popup__content .table-borderless .table-borderless__tit .txt {
   width: 15.5%;
+}
+
+/* 돌발 모니터링 */
+.monitering-outbreak .ly-left {
+  width: 300px;
+}
+
+.monitering-outbreak .ly-right {
+  margin-left: 300px;
 }
 
 /* 모니터링 통계 분석 테이블 높이 조절 */
@@ -2510,6 +2639,31 @@ table {
     font-size: 14px;
   }
   .vds8100 .table-borderless .flex__content.display {
+    margin-left: -65px;
+  }
+  /* 돌발 모니터링 */
+  .vds6200 .table-borderless.radar col:nth-child(1), .vds6200 .table-borderless.camera col:nth-child(1) {
+    width: 19% !important;
+  }
+  .vds6200 .table-borderless.radar col:nth-child(2), .vds6200 .table-borderless.camera col:nth-child(2) {
+    width: 14.33% !important;
+  }
+  .vds6200 .table-borderless.radar col:nth-child(3), .vds6200 .table-borderless.camera col:nth-child(3) {
+    width: 18% !important;
+  }
+  .vds6200 .table-borderless.radar col:nth-child(4), .vds6200 .table-borderless.camera col:nth-child(4) {
+    width: 15.33% !important;
+  }
+  .vds6200 .table-borderless.radar col:nth-child(5), .vds6200 .table-borderless.camera col:nth-child(5) {
+    width: 19.33% !important;
+  }
+  .vds6200 .table-borderless.radar col:nth-child(6), .vds6200 .table-borderless.camera col:nth-child(6) {
+    width: 14% !important;
+  }
+  .vds6200 .table-borderless.camera td:nth-child(2) {
+    font-size: 14px;
+  }
+  .vds6200 .table-borderless .flex__content.display {
     margin-left: -65px;
   }
   /* 컨텐츠 모달 팝업 */
