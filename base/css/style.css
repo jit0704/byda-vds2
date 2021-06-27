@@ -677,8 +677,8 @@ table {
 /* 아이콘 */
 .icon-outbreak {
   display: inline-block;
-  width: 50px;
-  height: 45px;
+  width: 130px;
+  height: 122px;
   background: url(/base/images/icon_warning_red.png) no-repeat 0 0;
   background-size: contain;
 }
@@ -1466,19 +1466,23 @@ table {
   padding-bottom: 10px;
   font-size: 14px;
   color: #ECF0F1;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #757575;
 }
 
 .lnb--outbreak .lnb__list a + a {
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .lnb--outbreak .lnb__list a.active {
-  color: #4d85ff;
+  color: #98AD06;
 }
 
 .lnb--outbreak .lnb__list p {
   line-height: 22px;
+}
+
+.lnb--outbreak .lnb__list p + p {
+  padding-top: 10px;
 }
 
 .lnb--outbreak .list-table__paging {
@@ -1494,9 +1498,9 @@ table {
   position: fixed;
   top: 0;
   bottom: 0;
-  right: -320px;
+  right: -360px;
   z-index: 3;
-  width: 320px;
+  width: 360px;
   -webkit-transition: right 0.2s;
   transition: right 0.2s;
   background: #f7f7f7;
@@ -1541,10 +1545,6 @@ table {
   margin-top: 20px;
 }
 
-.nav--outbreak {
-  overflow: hidden;
-}
-
 .nav--outbreak h2::before {
   content: "";
   display: inline-block;
@@ -1558,6 +1558,11 @@ table {
 
 .nav--outbreak .btn-close {
   top: 28px;
+}
+
+.nav--outbreak .nav__list {
+  height: calc(100vh - 90px);
+  overflow-y: auto;
 }
 
 .nav--outbreak .nav__list li {
@@ -1947,6 +1952,11 @@ table {
   font-size: 16px;
   color: #212529;
   vertical-align: middle;
+  font-weight: 400;
+}
+
+.list-table__paging a:hover, .list-table__paging a.active {
+  font-weight: 800;
 }
 
 .list-table__paging .btn-paging__first::before {
@@ -2412,6 +2422,40 @@ table {
 
 .monitering-outbreak .ly-right {
   margin-left: 300px;
+}
+
+/* 돌발 팝업 */
+.modal-outbreak .modal-popup__content > .box-wrap__algin {
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #d00404;
+}
+
+.modal-outbreak .modal-popup__content > .box-wrap__algin .box-wrap__algin--left {
+  width: 27%;
+  padding: 32px 0 0 12px;
+}
+
+.modal-outbreak .modal-popup__content > .box-wrap__algin .box-wrap__algin--right {
+  width: 73%;
+}
+
+.modal-outbreak .modal-popup__content .unit-table {
+  padding: 0;
+  border: 0;
+}
+
+.modal-outbreak .modal-popup__content .unit-table table th {
+  color: #d00404;
+}
+
+.modal-outbreak .modal-popup__content .unit-table table .become {
+  color: #d00404;
+  font-weight: 400;
+}
+
+.modal-outbreak .modal-popup__btn .btn__bg--style1 {
+  background: #d00404;
 }
 
 /* 모니터링 통계 분석 테이블 높이 조절 */

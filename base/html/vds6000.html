@@ -13,45 +13,51 @@
   </head>
   <body>
     <div class="wrapper">
-      <div id="ex1" class="modal bg-gray">
+      <div id="ex1" class="modal bg-gray modal-outbreak"> <!-- 210627 modal-outbreak 클래스 추가 -->
         <div class="modal-popup col2">
           <div class="modal-popup__header">
             <span class="modal-popup__title">돌발</span>
           </div>
           <!-- //modal-popup__header -->
           <div class="modal-popup__content">
-            <div class="unit-table table-borderless pdb10">
-              <!-- 210621 추가 -->
-              <div class="txt-align__center pdt10">
+            <!-- 210627 수정 -->
+            <div class="box-wrap__algin">
+              <div class="box-wrap__algin--left">
                 <span class="icon-outbreak"><em class="hidden">돌발</em></span>
               </div>
-              
-              <table>
-                <colgroup>
-                  <col style="width:35%;">
-                  <col style="width:65%;">
-                </colgroup>
-                <tbody>
-                  <tr>
-                    <th><span>일시</span></th>
-                    <td><span class="become">2021-08-06 16:30:12</span></td>
-                  </tr>
-                  <tr>
-                    <th><span>차로</span></th>
-                    <td><span class="become">3차로</span></td>
-                  </tr>
-                  <tr>
-                    <th><span>이벤트</span></th>
-                    <td><span class="become">역주행</span></td>
-                  </tr>
-                  <tr>
-                    <th><span>위치</span></th>
-                    <td><span class="become">사장교 9+990 송도방향</span></td>
-                  </tr>
-                </tbody>
-              </table>
+              <!-- //box-wrap__algin--left -->
+              <div class="box-wrap__algin--right">
+                <div class="unit-table table-borderless">
+                  <table>
+                    <colgroup>
+                      <col style="width:35%;">
+                      <col style="width:65%;">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th><span>일시</span></th>
+                        <td><span class="become">2021-08-06 16:30:12</span></td>
+                      </tr>
+                      <tr>
+                        <th><span>차로</span></th>
+                        <td><span class="become">3차로</span></td>
+                      </tr>
+                      <tr>
+                        <th><span>이벤트</span></th>
+                        <td><span class="become">역주행</span></td>
+                      </tr>
+                      <tr>
+                        <th><span>위치</span></th>
+                        <td><span class="become">사장교 9+990 송도방향</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //table-borderless -->
+              </div>
+              <!-- //box-wrap__algin--right -->
             </div>
-            <!-- //table-borderless -->
+            <!-- //box-wrap__algin -->
           </div>
           <!-- //modal-popup__content -->
 
