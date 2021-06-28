@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>아이디 찾기 결과</title>
+    <script type="text/javascript" src="/base/js/lib/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/base/js/lib/jquery.modal.min.js"></script>
+    <script type="text/javascript" src="/base/js/common/ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/base/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="/base/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="ex1" class="modal bg-gray">
+        <div class="modal-popup">
+          <div class="modal-popup__header">
+            <span class="modal-popup__title">아이디 찾기 결과</span>
+          </div>
+          <!-- //modal-popup__header -->
+          <div class="modal-popup__content">
+            <div class="search--result">
+              <p class="modal-popup__text">등록된 ID는 [XXXXXX] 입니다.</p>
+            </div>
+          </div>
+          <!-- //modal-popup__content -->
+          <span class="modal-popup__btn modal-popup__btn--size2">
+            <a href="# " rel="modal:close" class="btn__regular btn__bg--style2">확인</a>
+            <a href="# " rel="modal:close" class="btn__regular btn__bg--style1">재조회</a>
+          </span>
+          <!-- //modal-popup__btn-wrap -->
+        </div>
+        <!-- //modal-popup -->
+      </div>
+
+      <a href="#ex1" class="btn__modal--open" style="display: none;">비밀번호 찾기</a> <!-- 퍼블리싱 확인용 버튼 -->
+    </div>
+    <!-- //wrapper -->
+
+    <script>
+      // 퍼블리싱 확인용
+      $(function () {
+        $('.btn__modal--open').trigger('click');
+      });
+    </script>
+  </body>
+</html>

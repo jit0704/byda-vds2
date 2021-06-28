@@ -1999,7 +1999,7 @@ table {
 .login-wrap {
   position: relative;
   height: inherit;
-  background: #141724;
+  background: #1c2f42;
 }
 
 .loginbox {
@@ -2023,6 +2023,10 @@ table {
 
 .loginbox__logo {
   text-align: center;
+}
+
+.loginbox__logo img {
+  width: 300px;
 }
 
 .loginbox__inputbox {
@@ -2130,14 +2134,26 @@ table {
   background: #74748a;
 }
 
+/* 아이디 찾기 */
+.search--result {
+  padding: 30px 0 35px;
+}
+
+.search--result .modal-popup__text {
+  color: #3a4e63;
+  text-align: center;
+}
+
 /* 비밀번호 변경 */
 .modal-popup__pwchange {
   width: 415px;
   margin: 0 auto;
+  padding: 20px 0 35px;
 }
 
 .modal-popup__pwchange .modal-popup__pwchange--text {
   font-size: 20px;
+  color: #3a4e63;
 }
 
 .modal-popup__pwchange--form {
@@ -2153,10 +2169,11 @@ table {
 .modal-popup__pwchange--form dt {
   float: left;
   width: 35%;
-  line-height: 45px;
+  line-height: 33px;
   text-align: left;
   font-weight: 800;
   font-size: 20px;
+  color: #3a4e63;
 }
 
 .modal-popup__pwchange--form dt:nth-child(1) {
