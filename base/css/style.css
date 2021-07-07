@@ -1490,6 +1490,10 @@ table {
 }
 
 .lnb--outbreak .list-table__paging a {
+  color: #797c88;
+}
+
+.lnb--outbreak .list-table__paging a:hover, .lnb--outbreak .list-table__paging a.active {
   color: #fff;
 }
 
@@ -1515,7 +1519,7 @@ table {
   height: 90px;
   padding: 30px 0;
   text-align: center;
-  background: #1c2f42;
+  background: #3d546b;
 }
 
 .nav__head h2 {
@@ -1578,6 +1582,10 @@ table {
   line-height: 25px;
   font-weight: 700;
   color: #d00404;
+}
+
+.nav--outbreak .nav__list li p:last-child {
+  color: #6d707d;
 }
 
 .nav--profile li {
@@ -2441,7 +2449,22 @@ table {
   margin-left: 300px;
 }
 
+.monitering-outbreak .ly-right .unit-table-wrap > .flex__content {
+  width: 240px;
+}
+
 /* 돌발 팝업 */
+.modal-outbreak .modal-popup__title::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: -2px 10px 0 0;
+  vertical-align: middle;
+  background: url(/base/images/icon_warning_active.png) no-repeat 0 0;
+  background-size: contain;
+}
+
 .modal-outbreak .modal-popup__content > .box-wrap__algin {
   padding: 10px;
   background: #fff;
@@ -2468,11 +2491,6 @@ table {
 
 .modal-outbreak .modal-popup__content .unit-table table .become {
   color: #d00404;
-  font-weight: 400;
-}
-
-.modal-outbreak .modal-popup__btn .btn__bg--style1 {
-  background: #d00404;
 }
 
 /* 모니터링 통계 분석 테이블 높이 조절 */
@@ -2608,6 +2626,9 @@ table {
     vertical-align: baseline;
   }
   .table-borderless tbody th {
+    font-size: 14px;
+  }
+  .table-borderless tbody td .data {
     font-size: 14px;
   }
   /* 모니터링 화면 */

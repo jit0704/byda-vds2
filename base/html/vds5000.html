@@ -387,9 +387,18 @@
             $('body').css('overflow', 'hidden');
           }
         });
+
+        //210707 수정
         $popEl.resizable({
           containment: '.wrapper',
-          resize: function () {
+          minWidth: 300,
+          minHeight: 300,
+          resize: function (e, ui) {
+            $(this).find('video').css({
+              'width': ui.size.width,
+              'height': ui.size.height,
+              'object-fit': 'fill'
+            });
             $(this).css('height', $(this).find('video').height() + 53);
           }
         });

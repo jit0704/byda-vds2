@@ -30,12 +30,13 @@
         <div class="ly-right">
           <h3 class="huge-tit"># 사장교 :: 9+990 송도방향</h3>
           <div class="ly-right__content ratio--100per">
+            <!-- 210707 버튼 삭제 및 테이블 수정 -->
             <div class="unit-table-wrap vds6200">
               <div class="flex__content flex__content--jusi-sb">
-                <a href="#player" class="btn__regular btn__bg--style1">player</a>
-                <a href="#snap" class="btn__regular btn__bg--style1">snap</a>
-                <a href="#" class="btn__regular btn__bg--style1">무시</a>
-                <a href="#" class="btn__regular btn__bg--style1">돌발</a>
+                <!-- <a href="#player" class="btn__regular btn__bg--style1">player</a>
+                <a href="#snap" class="btn__regular btn__bg--style1">snap</a> -->
+                <a href="#" class="btn__regular btn__bg--style1">돌발 무시</a>
+                <a href="#" class="btn__regular btn__bg--style1">돌발 확정</a>
               </div>
               
               <div class="inner">
@@ -55,108 +56,55 @@
                     <tbody>
                       <tr>
                         <th><span>이벤트</span></th>
-                        <td><input type="text" class="input__style2"></td>
+                        <td><span class="data">역주행</span></td>
                         <th><span>차로</span></th>
-                        <td><input type="text" class="input__style2"></td>
+                        <td><span class="data">1</span></td>
                         <th><span>차종</span></th>
-                        <td><input type="text" class="input__style2"></td>
+                        <td><span class="data">중형</span></td>
                       </tr>
                       <tr>
                         <th><span>속도</span></th>
-                        <td><input type="text" class="input__style2"></td>
+                        <td><span class="data">87km/h</span></td>
                         <th><span>발생거리</span></th>
-                        <td><input type="text" class="input__style2"></td>
+                        <td><span class="data">50m</span></td>
                         <th><span>발생일시</span></th>
-                        <td><input type="text" class="input__style2"></td>
+                        <td><span class="data">2020-05-07 14:12:55</span></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
                 <!-- //unit-table -->
 
-                <div class="unit-table table-borderless radar">
+                <div class="unit-table table-borderless">
                   <em class="table-borderless__tit">
-                    <span class="txt">RADAR 정보</span>
+                    <span class="txt">현장 정보</span>
                   </em>
                   <table>
                     <colgroup>
-                      <col style="width:15%;">
-                      <col style="width:18.33%;">
-                      <col style="width:15%;">
-                      <col style="width:18.33%;">
-                      <col style="width:15%;">
-                      <col style="width:18.33%;">
+                      <col style="width:25%;">
+                      <col style="width:25%;">
+                      <col style="width:25%;">
+                      <col style="width:25%;">
                     </colgroup>
                     <tbody>
                       <tr>
-                        <th><span>로컬 제어기 ID</span></th>
-                        <td><input type="text" class="input__style2"></td>
+                        <th><span>RADAR ID</span></th>
+                        <td><span class="data">120</span></td>
                         <th><span>로컬 제어기 IP</span></th>
-                        <td><input type="text" class="input__style2"></td>
-                        <th><span>로컬 제어기 PORT</span></th>
-                        <td><input type="text" class="input__style2"></td>
+                        <td><span class="data">10.12.22.345</span></td>
                       </tr>
-                      <tr>
-                        <th><span>RADAR 제어 ID</span></th>
-                        <td><input type="text" class="input__style2"></td>
-                        <th><span>RADAR 제어 IP</span></th>
-                        <td><input type="text" class="input__style2"></td>
-                        <th><span>RADAR 제어 PORT</span></th>
-                        <td><input type="text" class="input__style2"></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <!-- //unit-table -->
-
-                <div class="unit-table table-borderless camera">
-                  <em class="table-borderless__tit">
-                    <span class="txt">CAMERA 정보</span>
-                  </em>
-                  <table>
-                    <colgroup>
-                      <col style="width:15%;">
-                      <col style="width:18.33%;">
-                      <col style="width:15%;">
-                      <col style="width:18.33%;">
-                      <col style="width:15%;">
-                      <col style="width:18.33%;">
-                    </colgroup>
-                    <tbody>
                       <tr>
                         <th><span>CAMERA ID</span></th>
-                        <td style="padding-left:8px;">AUTO</td>
+                        <td><span class="data">120</span></td>
                         <th><span>CAMERA IP</span></th>
-                        <td><input type="text" class="input__style2"></td>
-                        <th><span>CAMERA PORT</span></th>
-                        <td><input type="text" class="input__style2"></td>
-                      </tr>
-                      <tr>
-                        <th><span>Application Name</span></th>
-                        <td><input type="text" class="input__style2"></td>
-                        <th><span>Stream Name</span></th>
-                        <td><input type="text" class="input__style2"></td>
-                        <th><span>해상도</span></th>
-                        <td>
-                          <div class="flex__content display">
-                            <input type="text" class="input__style2">
-                            <span>X</span>
-                            <input type="text" class="input__style2">
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th><span>Stream URL</span></th>
-                        <td colspan="5"><input type="text" class="input__style2"></td>
-                      </tr>
-                      <tr>
-                        <th><span>RTSP 주소</span></th>
-                        <td colspan="5"><input type="text" class="input__style2"></td>
+                        <td><span class="data">10.12.22.345</span></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
                 <!-- //unit-table -->
+
+                
               </div>
               <!-- //inner -->
             </div>
