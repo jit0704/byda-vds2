@@ -360,19 +360,21 @@
           e.preventDefault();
           var $hash = $(this).attr('href');
           $($hash).fadeIn(150);
+          $('body').css('overflow', 'hidden'); //210711 추가
         });
         $btnClose.on('click', function(){
           $(this).closest($popEl).fadeOut(150);
-          $('body').css('overflow', 'auto');
+          //$('body').css('overflow', 'auto'); 210711 삭제
         });
         $popEl.draggable({
           containment: '.wrapper',
           drag: function () {
             $(this).css('transform', 'none');
           },
-          start: function () {
-            $('body').css('overflow', 'hidden');
-          }
+          //210711 삭제
+          // start: function () {
+          //   $('body').css('overflow', 'hidden');
+          // }
         });
         
         //210707 수정

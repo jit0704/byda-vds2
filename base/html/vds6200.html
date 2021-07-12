@@ -104,6 +104,38 @@
                 </div>
                 <!-- //unit-table -->
 
+                <div class="half-box">
+                  <div class="left">
+                    <div class="unit unit__video">
+                      <em class="unit__tit">돌발영상
+                        <a href="#player" class="btn-expand"><span class="hidden">사이즈 확장 버튼</span></a>
+                      </em>
+                      <div class="unit__content video__fluid">
+                        <div class="video__fluid__el">
+                          <video id="ipcamera_video_id" autoplay playsinline controls muted width="100%" height="100%">
+                            <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                          </video>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //unit -->
+                  </div>
+                  <div class="right">
+                    <div class="unit unit__photo">
+                      <em class="unit__tit">돌발 사진
+                        <a href="#snap" class="btn-expand"><span class="hidden">사이즈 확장 버튼</span></a>
+                      </em>
+                      <div class="unit__content">
+                        <figure>
+                          <img src="https://via.placeholder.com/800X800?text=sample+img" alt="">
+                          <figcaption class="hidden">돌발 사진</figcaption>
+                        </figure>
+                      </div>
+                    </div>
+                    <!-- //unit -->
+                  </div>
+                </div>
+                <!-- //half-box -->
                 
               </div>
               <!-- //inner -->
@@ -164,11 +196,12 @@
         $btnPlayer.on('click', function(e){
           e.preventDefault();
           var $hash = $(this).attr('href');
-          $($hash).css('width', '800px').fadeIn(150);
+          $($hash).fadeIn(150); //210711 수정
+          $('body').css('overflow', 'hidden'); //210711 추가
         });
         $btnClose.on('click', function(){
           $(this).closest($popEl).fadeOut(150);
-          $('body').css('overflow', 'auto');
+          //$('body').css('overflow', 'auto'); //210711 삭제
         });
         $popEl.draggable({
           containment: '.wrapper',
@@ -184,10 +217,17 @@
             $(this).css('z-index', '6');
           }
         });
+        //210711 수정
         $popEl.resizable({
           containment: '.wrapper',
           minWidth: 450,
-          resize: function () {
+          minHeight: 300,
+          resize: function (e, ui) {
+            $(this).find('video').css({
+              'width': ui.size.width,
+              'height': ui.size.height,
+              'object-fit': 'fill'
+            });
             $(this).css('height', $(this).find('video').height() + 53);
           }
         });
@@ -200,10 +240,11 @@
           e.preventDefault();
           var $hash = $(this).attr('href');
           $($hash).fadeIn(150);
+          $('body').css('overflow-y', 'hidden'); //210711 추가
         });
         $popImgbtnClose.on('click', function(){
           $(this).closest($popImgEl).fadeOut(150);
-          $('body').css('overflow', 'auto');
+          //$('body').css('overflow', 'auto'); //210711 삭제
         });
         $popImgEl.draggable({
           containment: '.wrapper',
@@ -219,10 +260,17 @@
             $(this).css('z-index', '6');
           }
         });
+        //210711 수정
         $popImgEl.resizable({
           containment: '.wrapper',
           minWidth: 450,
-          resize: function () {
+          minHeight: 300,
+          resize: function (e, ui) {
+            $(this).find('img').css({
+              'width': ui.size.width,
+              'height': ui.size.height,
+              'object-fit': 'fill'
+            });
             $(this).css('height', $(this).find('img').height() + 53);
           }
         });
