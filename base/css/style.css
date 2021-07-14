@@ -2439,6 +2439,10 @@ table {
   margin-bottom: 0;
 }
 
+.pop-img--expand .unit .snap-img img {
+  height: 100%;
+}
+
 .pop-img--expand .btn-close {
   position: absolute;
   top: 6px;

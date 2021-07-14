@@ -217,18 +217,20 @@
             $(this).css('z-index', '6');
           }
         });
-        //210711 수정
+        //210715 수정
         $popEl.resizable({
           containment: '.wrapper',
           minWidth: 450,
           minHeight: 300,
           resize: function (e, ui) {
-            $(this).find('video').css({
+            $(this).find('.unit').css({
               'width': ui.size.width,
-              'height': ui.size.height,
-              'object-fit': 'fill'
+              'height': ui.size.height
             });
-            $(this).css('height', $(this).find('video').height() + 53);
+            $(this).find('.video__fluid__el').css({
+              'width': ui.size.width,
+              'height': ui.size.height - 53
+            });
           }
         });
 
@@ -260,18 +262,20 @@
             $(this).css('z-index', '6');
           }
         });
-        //210711 수정
+        //210715 수정
         $popImgEl.resizable({
           containment: '.wrapper',
           minWidth: 450,
           minHeight: 300,
           resize: function (e, ui) {
-            $(this).find('img').css({
+            $(this).find('.unit').css({
               'width': ui.size.width,
-              'height': ui.size.height,
-              'object-fit': 'fill'
+              'height': ui.size.height
             });
-            $(this).css('height', $(this).find('img').height() + 53);
+            $(this).find('.snap-img').css({
+              'width': ui.size.width,
+              'height': ui.size.height - 53
+            });
           }
         });
       });
